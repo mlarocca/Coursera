@@ -9,15 +9,18 @@ I started looking at columns in training data. First column is just a index (the
 
 Then I started printing some features histograms and charts with two features against each other to see if I could spot patterns that could help building a good model.
 Most features, taken alone, wouldn't show significant patterns: they looked something like this
-![yaw](yaw.jpg)
+
+![yaw](..images/yaw.jpg)
 
 with spikes corresponding to the same values for all the classes.
 Moving on, not every combination of features was useful either:
-![accel](accel_x_vs_y.jpg)
+
+![accel](..images/accel_x_vs_y.jpg)
 
 As you can see above, the shapes are almost identical for all clasees.
 Some combinations, instead, worked better
-![pitch_and_roll](pitch_vs_roll.jpg)
+
+![pitch_and_roll](..images/pitch_vs_roll.jpg)
 
 And indeed you can see very different shapes for at least some of the classes.
 That tells us those features will probably be important for building a good model.
@@ -34,7 +37,8 @@ It is a bit slow to train because of the big number of columns and rows, but a c
 To double check performance, testing this model against the boosting predictor only, the increment in accuracy for out-of-sample error was marginal: just about 0.3%. The increment with respect to linear regression only, instead, was about 20%. Since the gbm model is the one requiring more time to train, in absence og time constraint it is still good to gain even a small improvement using bagging among multiple models, in exchange for a few more minutes required for training.
 
 I tested the out-of-sample error on the cross-validation set and the result was very encouraging:
-![accuracy](accuracy.jpg)
+
+![accuracy](..images/accuracy.jpg)
 
 As shown above, the expected accuracy is greather than 99%. As a matter of fact, when I submitted the answers for the second part of the exercise, all 20 predictions were correct.
 
