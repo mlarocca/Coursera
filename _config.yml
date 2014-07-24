@@ -1,5 +1,4 @@
 ---
-permalink: /:month-:day-:year/:title.html
-url: http://mlarocca.github.com
+url: http://mlarocca.github.com/Coursera
 markdown: redcarpet
 pygments: true
