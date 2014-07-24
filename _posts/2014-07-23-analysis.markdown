@@ -9,7 +9,7 @@ I started looking at columns in training data. First column is just a index (the
 
 Then I started printing some features histograms and charts with two features against each other to see if I could spot patterns that could help building a good model.
 Most features, taken alone, wouldn't show significant patterns: they looked something like this
-![yaw](!yaw.jpg)
+![yaw](yaw.jpg)
 
 with spikes corresponding to the same values for all the classes.
 Moving on, not every combination of features was useful either:
